@@ -15,7 +15,9 @@
     "docs": "cd docs && rm -rf _build/html && make html && jsdoc -d ./apidocs/ -P ./package.json -r .",
     "lint": "./node_modules/eslint/bin/eslint.js -c .eslintrc lib/** test/** --ignore-pattern **/*.yml --quiet",
     "test": "npm run lint && istanbul cover ./node_modules/mocha/bin/_mocha --check-leaks --report html -- --reporter spec --recursive --growl --no-timeouts",
-    "test-travis": "npm run lint && istanbul cover ./node_modules/mocha/bin/_mocha --check-leaks --report lcovonly -- --reporter spec --recursive --no-timeouts"
+    "test-travis": "npm run lint && istanbul cover ./node_modules/mocha/bin/_mocha --check-leaks --report lcovonly -- --reporter spec --recursive --no-timeouts",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": "stormpath/express-stormpath",
   "author": "Stormpath, Inc.",
@@ -40,7 +42,8 @@
     "stormpath-config": "0.0.23",
     "utils-merge": "^1.0.0",
     "uuid": "^2.0.1",
-    "winston": "^2.1.1"
+    "winston": "^2.1.1",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "cheerio": "^0.20.0",
@@ -52,5 +55,6 @@
     "mocha-lcov-reporter": "^1.0.0",
     "sinon": "^1.17.3",
     "supertest": "^1.1.0"
-  }
+  },
+  "snyk": true
 }
