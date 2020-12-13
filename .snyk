@@ -1,0 +1,18 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - lodash:
+        patched: '2020-04-30T21:28:52.586Z'
+    - stormpath-config > lodash:
+        patched: '2020-04-30T21:28:52.586Z'
+    - forms > async > lodash:
+        patched: '2020-04-30T21:28:52.586Z'
+    - stormpath > stormpath-config > lodash:
+        patched: '2020-04-30T21:28:52.586Z'
+    - stormpath > stormpath-config > async > lodash:
+        patched: '2020-04-30T21:28:52.586Z'
+    - stormpath > request > form-data > async > lodash:
+        patched: '2020-04-30T21:28:52.586Z'
