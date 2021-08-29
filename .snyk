@@ -1,0 +1,17 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.21.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - stormpath > request > hawk > hoek:
+        patched: '2021-08-29T21:57:44.392Z'
+    - stormpath > request > hawk > boom > hoek:
+        patched: '2021-08-29T21:57:44.392Z'
+    - stormpath > request > hawk > sntp > hoek:
+        patched: '2021-08-29T21:57:44.392Z'
+    - stormpath > request > hawk > cryptiles > boom > hoek:
+        patched: '2021-08-29T21:57:44.392Z'
+  'npm:tunnel-agent:20170305':
+    - stormpath > request > tunnel-agent:
+        patched: '2021-08-29T21:57:44.392Z'
